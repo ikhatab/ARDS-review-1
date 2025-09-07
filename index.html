@@ -1,0 +1,62 @@
+<body>
+  <h1>ARDS Learning Hub & Ventilator Simulator</h1>
+
+  <!-- Section 1: Overview -->
+  <h2>📘 ARDS Overview</h2>
+  <p>
+    Acute Respiratory Distress Syndrome (ARDS) is a severe form of hypoxemic respiratory failure
+    caused by diffuse alveolar damage. It is characterized by bilateral opacities, reduced compliance,
+    and impaired oxygenation.
+  </p>
+
+  <!-- Section 2: Research Timeline -->
+  <h2>📜 Research Timeline</h2>
+  <canvas id="timelineChart"></canvas>
+
+  <!-- Section 3: Figures -->
+  <h2>📊 ARDS Figures</h2>
+  <div class="container">
+    <div class="card">
+      <h3>Pathophysiology Cascade</h3>
+      <canvas id="pathoChart"></canvas>
+    </div>
+    <div class="card">
+      <h3>Ventilator Safety</h3>
+      <canvas id="safetyChart"></canvas>
+    </div>
+  </div>
+
+  <!-- Section 4: Ventilator Simulation -->
+  <h2>🖥️ Ventilator Simulation</h2>
+  <div class="container">
+    <!-- Input Panel -->
+    <div class="card">
+      <h3>Set Ventilator Parameters</h3>
+      <label>Tidal Volume (mL/kg PBW): <input id="tv" type="number" value="6"></label>
+      <label>Rate (breaths/min): <input id="rate" type="number" value="20"></label>
+      <label>PEEP (cmH₂O): <input id="peep" type="number" value="10"></label>
+      <label>FiO₂ (%): <input id="fio2" type="number" value="60"></label>
+      <label>I:E Ratio: <input id="ie" type="text" value="1:2"></label>
+      <label>PBW (kg): <input id="pbw" type="number" value="70"></label>
+      <label>Compliance (mL/cmH₂O): <input id="compliance" type="number" value="30"></label>
+      <button onclick="simulate()">Run Simulation</button>
+    </div>
+
+    <!-- Output Panel -->
+    <div class="card">
+      <h3>Simulation Output</h3>
+      <div class="output" id="results"></div>
+    </div>
+  </div>
+
+  <!-- Section 5: Recommendations -->
+  <h2>📊 Recommendations</h2>
+  <div class="card">
+    <div id="recs"></div>
+  </div>
+
+  <!-- Section 6: Dynamic Blood Gas Graph -->
+  <h2>🩸 Blood Gas Trends</h2>
+  <div class="card">
+    <canvas id="abgChart"></canvas>
+  </div>
